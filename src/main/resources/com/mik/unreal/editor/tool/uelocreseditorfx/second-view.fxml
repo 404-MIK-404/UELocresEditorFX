@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.mik.unreal.editor.tool.uelocreseditorfx.SecondViewController"
+            prefHeight="400.0" prefWidth="600.0">
+
+
+    <Label fx:id="secondTextLabel" text="HELLO WORLD FROM SECOND VIEW !"/>
+
+</AnchorPane>

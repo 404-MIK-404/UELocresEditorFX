@@ -21,10 +21,14 @@ module com.mik.unreal.editor.tool.uelocreseditorfx {
     requires spring.boot.starter.web;
     requires spring.web;
     requires org.apache.tomcat.embed.websocket;
+    requires com.fasterxml.jackson.annotation;
 
 
     opens com.mik.unreal.editor.tool.uelocreseditorfx to spring.core, spring.beans, spring.aop, javafx.fxml;
     opens com.mik.unreal.editor.tool.uelocreseditorfx.service to spring.core, spring.beans, spring.aop;
+    opens com.mik.unreal.editor.tool.uelocreseditorfx.model to spring.core, spring.beans, spring.aop;
+    opens com.mik.unreal.editor.tool.uelocreseditorfx.utils to spring.core, spring.beans, spring.aop;
+
     exports com.mik.unreal.editor.tool.uelocreseditorfx;
 
 }
