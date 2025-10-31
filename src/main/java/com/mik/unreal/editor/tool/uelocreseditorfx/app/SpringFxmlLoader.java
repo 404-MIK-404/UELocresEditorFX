@@ -11,7 +11,7 @@ import java.io.IOException;
 
 @Component
 @RequiredArgsConstructor
-public class SpringFxmlLoader<T> {
+public class SpringFxmlLoader {
 
     private final ConfigurableApplicationContext context;
 
