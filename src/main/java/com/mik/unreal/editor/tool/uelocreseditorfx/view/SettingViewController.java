@@ -1,6 +1,7 @@
 package com.mik.unreal.editor.tool.uelocreseditorfx.view;
 
 import com.mik.unreal.editor.tool.uelocreseditorfx.app.SpringFxmlLoader;
+import com.mik.unreal.editor.tool.uelocreseditorfx.model.enums.View;
 import com.mik.unreal.editor.tool.uelocreseditorfx.service.ServiceApplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,7 +14,7 @@ import java.io.IOException;
 
 @Component
 @RequiredArgsConstructor
-public class SecondViewController {
+public class SettingViewController {
 
     private final ServiceApplication serviceApplication;
 
@@ -30,7 +31,9 @@ public class SecondViewController {
     protected void onHelloButtonClick() throws IOException {
         Stage stage = (Stage) helloWorldBtn.getScene().getWindow();
         stage.close();
-        springFxmlLoader.changeScene(getClass(),stage,"/view/hello-view.fxml");
+        springFxmlLoader.loadScene(stage, View.HOME);
     }
+
+
 
 }

@@ -25,11 +25,12 @@ module com.mik.unreal.editor.tool.uelocreseditorfx {
 
 
     opens com.mik.unreal.editor.tool.uelocreseditorfx.service to spring.core, spring.beans, spring.aop;
-    opens com.mik.unreal.editor.tool.uelocreseditorfx.model to spring.core, spring.beans, spring.aop;
+    opens com.mik.unreal.editor.tool.uelocreseditorfx.view to javafx.fxml, spring.aop, spring.beans, spring.core;
+    opens com.mik.unreal.editor.tool.uelocreseditorfx.app to javafx.fxml, spring.aop, spring.beans, spring.core;
+    opens com.mik.unreal.editor.tool.uelocreseditorfx.model.internal to spring.aop, spring.beans, spring.core;
+    opens com.mik.unreal.editor.tool.uelocreseditorfx.viewmodel to spring.aop, spring.beans, spring.core;
 
     exports com.mik.unreal.editor.tool.uelocreseditorfx.view;
-    opens com.mik.unreal.editor.tool.uelocreseditorfx.view to javafx.fxml, spring.aop, spring.beans, spring.core;
     exports com.mik.unreal.editor.tool.uelocreseditorfx.app;
-    opens com.mik.unreal.editor.tool.uelocreseditorfx.app to javafx.fxml, spring.aop, spring.beans, spring.core;
 
 }

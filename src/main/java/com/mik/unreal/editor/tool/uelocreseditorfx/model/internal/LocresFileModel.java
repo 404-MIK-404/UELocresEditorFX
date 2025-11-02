@@ -1,4 +1,4 @@
-package com.mik.unreal.editor.tool.uelocreseditorfx.model;
+package com.mik.unreal.editor.tool.uelocreseditorfx.model.internal;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;

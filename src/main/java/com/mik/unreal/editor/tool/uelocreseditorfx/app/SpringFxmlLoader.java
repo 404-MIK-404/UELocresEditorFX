@@ -1,10 +1,11 @@
 package com.mik.unreal.editor.tool.uelocreseditorfx.app;
 
+import com.mik.unreal.editor.tool.uelocreseditorfx.model.enums.View;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -13,12 +14,12 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class SpringFxmlLoader {
 
-    private final ConfigurableApplicationContext context;
+    private final ApplicationContext applicationContext;
 
-    public void changeScene(Class clazz, Stage stage, String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(clazz.getResource(fxml));
-        fxmlLoader.setControllerFactory(context::getBean);
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+    public void loadScene(Stage stage, View view) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(view.getFxmlView()));
+        fxmlLoader.setControllerFactory(applicationContext::getBean);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
     }
