@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox alignment="CENTER" prefHeight="700.0" prefWidth="1024.0" spacing="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mik.unreal.editor.tool.uelocreseditorfx.view.HomeViewController">
    <MenuBar VBox.vgrow="ALWAYS">
@@ -18,10 +22,11 @@
            <MenuItem mnemonicParsing="false" text="Close application" />
          </items>
        </Menu>
-       <Menu mnemonicParsing="false" text="Edit">
-         <items>
-           <MenuItem mnemonicParsing="false" text="Delete" />
-         </items>
+       <Menu mnemonicParsing="false" text="Settings">
+            <items>
+               <MenuItem mnemonicParsing="false" onAction="#onClickMenuItemPreference" text="Preference" />
+               <MenuItem mnemonicParsing="false" onAction="#onClickMenuItemLanguage" text="Language" />
+            </items>
        </Menu>
        <Menu mnemonicParsing="false" text="Help">
          <items>
@@ -32,9 +37,30 @@
    </MenuBar>
    <TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
      <columns>
-       <TableColumn prefWidth="75.0" text="C1" />
-       <TableColumn prefWidth="75.0" text="C2" />
+       <TableColumn editable="false" sortable="false" text="Key" />
+       <TableColumn editable="false" sortable="false" text="Source" />
+         <TableColumn sortable="false" text="Target" />
      </columns>
+      <columnResizePolicy>
+         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+      </columnResizePolicy>
    </TableView>
+   <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+      <children>
+         <Label prefWidth="50.0" text="Console" textOverrun="CLIP">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <ListView prefHeight="200.0" prefWidth="200.0">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </ListView>
+      </children>
+      <VBox.margin>
+         <Insets left="10.0" right="10.0" />
+      </VBox.margin>
+   </VBox>
     <Button fx:id="helloWorldBtn" onAction="#onHelloButtonClick" text="Hello!" />
 </VBox>

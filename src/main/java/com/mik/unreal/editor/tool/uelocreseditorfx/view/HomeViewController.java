@@ -32,5 +32,16 @@ public class HomeViewController {
         springFxmlLoader.loadScene(stage, View.SETTINGS);
     }
 
+    @FXML
+    protected void onClickMenuItemPreference() {
+        System.out.println("MENU ITEM PREFERENCE");
+    }
+
+    @FXML
+    protected void onClickMenuItemLanguage() {
+        System.out.println("MENU ITEM LANGUAGE");
+    }
+
+
 
 }
