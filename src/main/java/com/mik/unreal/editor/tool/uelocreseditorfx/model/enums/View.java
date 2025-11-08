@@ -8,9 +8,12 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum View {
 
-    HOME(FxmlConfigView.URL_VIEW + "/home.fxml"),
-    SETTINGS(FxmlConfigView.URL_VIEW + "/settings.fxml");
+    HOME(FxmlConfigView.URL_VIEW + "/home.fxml","Home"),
+    SETTINGS(FxmlConfigView.URL_VIEW + "/settings.fxml","Settings"),
+    ABOUT(FxmlConfigView.URL_VIEW + "/about.fxml","About"),;
 
     private String fxmlView;
+
+    private String title;
 
 }
